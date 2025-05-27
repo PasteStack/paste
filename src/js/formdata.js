@@ -7,13 +7,13 @@
  * Polyfill Module
  *
  * @requires paste
- * @module paste/io/formdata
+ * @module paste/formdata
  *
  * Specification: http://www.w3.org/TR/XMLHttpRequest/#formdata
  *
  */
 
-paste['define']('paste.io.formdata', function () {
+paste['define']('paste.formdata', function () {
     var APPEND_KEY = 'append',
         SUPPORTED_FORM_NODE_NAMES = ['input', 'textarea', 'select', 'button', 'datalist', 'keygen', 'output'],
         $slice = Array['prototype']['slice'],
