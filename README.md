@@ -1,3 +1,25 @@
+## Paste Overview
+
+![gap-paste.png](readme-images/gap-paste.png)
+
+![paste-client-server.png](readme-images/paste-client-server.png)
+
+![paste-server.png](readme-images/paste-server.png)
+
+![paste-feature-eventing.png](readme-images/paste-feature-eventing.png)
+
+## Performance of Paste
+
+![performance-2013-chrome.png](readme-images/performance-2013-chrome.png)
+
+![performance-2013-chrome-canary.png](readme-images/performance-2013-chrome-canary.png)
+
+![performance-2013-firefox.png](readme-images/performance-2013-firefox.png)
+
+![performance-2013-safari.png](readme-images/performance-2013-safari.png)
+
+
+## Linking to Paste with JsDeliver
 
 ### Core Files
 https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/dom.js
