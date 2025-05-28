@@ -13,7 +13,7 @@
         /**
          * Hack for simple support of Object.keys.
          * Remove once we stop supporting <= IE9
-         * Shamelessly copied from: http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html
+         * Shamelessly inspired from: "http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html"
          *
          * @param {Object} o
          * @return {Array}
