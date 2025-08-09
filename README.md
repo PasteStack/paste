@@ -22,61 +22,63 @@
 ## Linking to Paste with JsDeliver
 
 ### Core Files
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/dom.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/formdata.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/has.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/lru.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/paste.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/speed.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/event.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/guid.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/io.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/oop.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/storage.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/util.js
+
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/dom.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/formdata.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/has.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/lru.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/paste.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/speed.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/event.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/guid.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/io.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/oop.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/storage.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/util.js
 
 ### Polyfills
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/array.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/focusinout.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/getcomputedstyle.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/ie8head/html5.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/ie8head/json2.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/object.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/performance.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/polyfills/selectors.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/array.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/focusinout.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/getcomputedstyle.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/ie8head/html5.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/ie8head/json2.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/object.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/performance.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/selectors.js
 
 ### UI
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/autogrow.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/throttle.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/autogrow.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/throttle.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/heroscroll.js
 
 ### UI > Form
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/bootstrap.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/validity.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/bootstrap.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/validity.js
 
 ### UI > Form > Plus
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/allowed_chars.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/brand_select.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/js_tooltip.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/navigate_on_change.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/sortable.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/autosave.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/imageupload.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/multistate.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/prevent_double_submit.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/form/plus/update_text_on_input_change.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/allowed_chars.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/brand_select.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/js_tooltip.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/navigate_on_change.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/sortable.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/autosave.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/imageupload.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/multistate.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/prevent_double_submit.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/form/plus/update_text_on_input_change.js
 
 ### UI > TV
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/tv/mediator.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/tv/mediator.js
 
 ### UI > Widgets
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/basic_form.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/drop_color_option.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/lazy_loader.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/manipulate_dom.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/modals.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/update_preview.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/display_modal.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/inline_edit.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/lists.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/message.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@2025.05.27.1/src/ui/widgets/unsupported_browser.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/basic_form.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/drop_color_option.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/lazy_loader.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/manipulate_dom.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/modals.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/update_preview.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/display_modal.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/inline_edit.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/lists.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/message.js
+https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/ui/widgets/unsupported_browser.js
