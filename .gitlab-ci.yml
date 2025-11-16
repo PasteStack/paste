@@ -1,0 +1,12 @@
+image: node:18
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npx jest --coverage
+    - npx playwright install --with-deps
+    - npx playwright test
