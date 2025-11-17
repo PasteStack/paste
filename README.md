@@ -1,3 +1,8 @@
+
+![Author](https://img.shields.io/badge/author-Thomas%20Schena-blue)
+![GitHub](https://img.shields.io/badge/github-sgoggles-black?logo=github)
+![License](https://img.shields.io/badge/license-Apache--2.0-green)
+
 ## Paste Overview
 
 ![gap-paste.png](readme-images/gap-paste.png)
@@ -45,3 +50,43 @@ https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/ie8hea
 https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/object.js
 https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/performance.js
 https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/selectors.js
+
+
+## Project Goals
+
+Paste.js is intended to serve as a durable, cross-platform toolkit for:
+
+- Bridging gaps between legacy browsers and modern environments.
+- Providing a thin, fast abstraction over DOM, events, storage, I/O, and UI widgets.
+- Acting as the compatibility and performance layer between your app code and the browser.
+
+The architecture diagrams in this repository (`readme-images/*.png`) illustrate Paste.js in a client/server context and how it mediates between different runtime concerns.
+
+## Performance Benchmarks
+
+Historical performance charts in `readme-images/` (Chrome, Chrome Canary, Firefox, Safari) capture the original focus of Paste.js: predictable performance across very different JavaScript engines.
+
+At a high level:
+
+- Paste.js favors direct DOM and event operations over heavy abstractions.
+- It was benchmarked across multiple engines to ensure stable behavior.
+- The goal is not just raw speed, but **consistent performance** across environments.
+
+## jsDelivr CDN Links (tag v1.0.0)
+
+Once you tag the repository with `v1.0.0`, you can consume Paste.js via jsDelivr:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/paste.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/dom.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/util.js"></script>
+<!-- and so on for other modules -->
+```
+
+Or as an ES module with a bundler:
+
+```js
+import Paste, { dom, util } from "https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/paste-esm.js";
+
+dom.addCssClass(document.body, "paste-ready");
+```
