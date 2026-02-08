@@ -1,9 +1,22 @@
+# paste
 
 ![Author](https://img.shields.io/badge/author-Thomas%20Schena-blue)
 ![GitHub](https://img.shields.io/badge/github-sgoggles-black?logo=github)
-![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/version-2.0.1-blue)
 
-## Paste Overview
+**paste** is a minimalist, dependency-free JavaScript toolkit originally created in **2011** to power high-performance webviews inside early iPhone applications. It is the foundational layer of [PasteStack](https://github.com/PasteStack).
+
+## What's New in v2.0.0
+
+- **ES modules** — `paste-esm.js` provides native `import`/`export` support
+- **Mocha/Chai** test runner replaces Jest
+- **UI widgets removed** — heroscroll, stickynav, autogrow, etc. moved to [paste-elements](https://gitlab.com/tomshley/brands/global/tware/tech/products/paste/paste-elements)
+- **Project restructure** — npm removed in favor of project-level structure
+
+See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full details.
+
+## Architecture
 
 ![gap-paste.png](readme-images/gap-paste.png)
 
@@ -13,7 +26,50 @@
 
 ![paste-feature-eventing.png](readme-images/paste-feature-eventing.png)
 
-## Performance of Paste
+## Modules
+
+| Module | Description |
+|--------|-------------|
+| `paste/dom` | DOM utilities and CSS class manipulation |
+| `paste/event` | Cross-browser event system |
+| `paste/oop` | Lightweight OOP (inheritance, mixins) |
+| `paste/util` | Object/array/string utilities |
+| `paste/io` | Async script loading and XHR |
+| `paste/storage` | localStorage/sessionStorage abstraction |
+| `paste/featuredetect` | Feature detection (`paste/has`) |
+| `paste/lru` | LRU cache |
+| `paste/speed` | Performance measurement helpers |
+| `paste/guid` | GUID generation |
+| `paste/formdata` | FormData utilities |
+| `polyfills/*` | Array, Object, selectors, performance, etc. |
+
+## Usage
+
+### ES Module
+
+```js
+import Paste, { dom, util } from "https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/paste-esm.js";
+
+dom.addCssClass(document.body, "paste-ready");
+```
+
+### Script Tag
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/paste.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/dom.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/util.js"></script>
+```
+
+### JAM Combo URL (via paste-assetgraph)
+
+```html
+<script src="/jam?v=2.0.1&m=paste/dom,paste/event,paste/util"></script>
+```
+
+## Performance
+
+Historical benchmarks in `readme-images/` (Chrome, Chrome Canary, Firefox, Safari) demonstrate paste's focus: **consistent performance across engines**.
 
 ![performance-2013-chrome.png](readme-images/performance-2013-chrome.png)
 
@@ -23,70 +79,24 @@
 
 ![performance-2013-safari.png](readme-images/performance-2013-safari.png)
 
+## PasteStack Ecosystem
 
-## Linking to Paste with JsDeliver
+paste is the foundation of PasteStack. UI components, asset pipeline, and surface rendering build on top:
 
-### Core Files
-
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/dom.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/formdata.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/has.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/lru.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/paste.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/speed.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/event.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/guid.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/io.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/oop.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/storage.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/util.js
-
-### Polyfills
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/array.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/focusinout.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/getcomputedstyle.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/ie8head/html5.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/ie8head/json2.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/object.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/performance.js
-https://cdn.jsdelivr.net/gh/tomshley/paste@v2025.05.27.4/src/js/polyfills/selectors.js
-
+```
+paste              ← you are here (core JS utilities)
+paste-elements     ← JS/SCSS UI components (YUI-style modules)
+paste-assetgraph   ← Rust pipeline: bundles + manifest.json
+paste-surface-*    ← templates, ViewModels, asset injection
+```
 
 ## Project Goals
 
-Paste.js is intended to serve as a durable, cross-platform toolkit for:
+- Provide the smallest possible set of utilities to build real applications fast
+- Direct DOM and event operations over heavy abstractions
+- Cross-platform: works in browsers, webviews, and server-rendered contexts
+- Zero dependencies, ~11k/8k gzipped
 
-- Bridging gaps between legacy browsers and modern environments.
-- Providing a thin, fast abstraction over DOM, events, storage, I/O, and UI widgets.
-- Acting as the compatibility and performance layer between your app code and the browser.
+## License
 
-The architecture diagrams in this repository (`readme-images/*.png`) illustrate Paste.js in a client/server context and how it mediates between different runtime concerns.
-
-## Performance Benchmarks
-
-Historical performance charts in `readme-images/` (Chrome, Chrome Canary, Firefox, Safari) capture the original focus of Paste.js: predictable performance across very different JavaScript engines.
-
-At a high level:
-
-- Paste.js favors direct DOM and event operations over heavy abstractions.
-- It was benchmarked across multiple engines to ensure stable behavior.
-- The goal is not just raw speed, but **consistent performance** across environments.
-
-## jsDelivr CDN Links (tag v1.0.0)
-
-Once you tag the repository with `v1.0.0`, you can consume Paste.js via jsDelivr:
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/paste.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/dom.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/util.js"></script>
-<!-- and so on for other modules -->
-```
-
-Or as an ES module with a bundler:
-
-```js
-import Paste, { dom, util } from "https://cdn.jsdelivr.net/gh/tomshley/paste@v1.0.0/src/paste-esm.js";
-
-dom.addCssClass(document.body, "paste-ready");
-```
+MIT
