@@ -6,7 +6,7 @@ include:
 variables:
   CICD_PIPELINES_RUNNER_TAG: "0.9.1"
   BASE_CONTAINERS_REGISTRY: registry.gitlab.com/tomshley/brands/global/tware/tech/products/provisioning/base-containers
-  BASE_CONTAINERS_UPSTREAM_TAG: "0.5.0"
+  BASE_CONTAINERS_UPSTREAM_TAG: "0.6.0"
 
 # Branch and tag pipelines carry the build; merge request pipelines would only
 # duplicate them (the adapter's workflow admits both), so they are skipped here.
