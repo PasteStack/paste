@@ -1,0 +1,47 @@
+include:
+  - project: 'tomshley/brands/global/tware/tech/products/provisioning/cicd-pipelines'
+    ref: 'v0.9.1'
+    file: '/adapters/gitlab/ci/adapter.yml'
+
+variables:
+  CICD_PIPELINES_RUNNER_TAG: "0.9.1"
+  BASE_CONTAINERS_REGISTRY: registry.gitlab.com/tomshley/brands/global/tware/tech/products/provisioning/base-containers
+  BASE_CONTAINERS_UPSTREAM_TAG: "0.6.0"
+
+# Branch and tag pipelines carry the build; merge request pipelines would only
+# duplicate them (the adapter's workflow admits both), so they are skipped here.
+# Tag pipelines must keep these jobs: the publish job declares `needs` on them.
+.runs-on-branch-or-tag:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: '$CI_COMMIT_TAG'
+    - if: '$CI_COMMIT_BRANCH'
+
+package-source:
+  extends: [.runs-on-branch-or-tag]
+  image: alpine:3.21.3
+  stage: build
+  script:
+    - test -d src/js
+    - mkdir -p target
+    - tar -czf "target/paste-${CI_COMMIT_SHA}.tar.gz" src README.md LICENSE NOTICE.md VERSION
+  artifacts:
+    paths: [target/paste-*.tar.gz]
+    expire_in: 1 day
+
+test:
+  extends: [.runs-on-branch-or-tag]
+  image: node:22.14.0-bookworm
+  stage: test
+  needs: [package-source]
+  script:
+    # Every shipped source file must parse; a missed file is a broken package.
+    - find src/js -name '*.js' -print0 | xargs -0 -n1 node --check
+
+publish:
+  extends: [.tomshley-cicd-publish-generic]
+  needs: [package-source, test]
+  variables:
+    TOMSHLEY_CICD_GENERIC_PACKAGE: paste
+    TOMSHLEY_CICD_GENERIC_ARTIFACT: target/paste-${CI_COMMIT_SHA}.tar.gz

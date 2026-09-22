@@ -2,15 +2,13 @@
 
 ![Author](https://img.shields.io/badge/author-Thomas%20Schena-blue)
 ![GitHub](https://img.shields.io/badge/github-sgoggles-black?logo=github)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-2.0.1-blue)
+![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![Version](https://img.shields.io/badge/version-2.0.2-blue)
 
 **paste** is a minimalist, dependency-free JavaScript toolkit originally created in **2011** to power high-performance webviews inside early iPhone applications. It is the foundational layer of [PasteStack](https://github.com/PasteStack).
 
 ## What's New in v2.0.0
 
-- **ES modules** — `paste-esm.js` provides native `import`/`export` support
-- **Mocha/Chai** test runner replaces Jest
 - **UI widgets removed** — heroscroll, stickynav, autogrow, etc. moved to [paste-elements](https://gitlab.com/tomshley/brands/global/tware/tech/products/paste/paste-elements)
 - **Project restructure** — npm removed in favor of project-level structure
 
@@ -41,30 +39,28 @@ See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full details.
 | `paste/speed` | Performance measurement helpers |
 | `paste/guid` | GUID generation |
 | `paste/formdata` | FormData utilities |
-| `polyfills/*` | Array, Object, selectors, performance, etc. |
+| `polyfills/*` | Array, Object, getComputedStyle, focusin/out, performance |
 
 ## Usage
 
-### ES Module
-
-```js
-import Paste, { dom, util } from "https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/paste-esm.js";
-
-dom.addCssClass(document.body, "paste-ready");
-```
-
 ### Script Tag
 
+The modules are classic scripts registered with `paste.define`; there is no ES module
+build in this package.
+
 ```html
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/paste.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/dom.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.1/src/js/util.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/paste.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/dom.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/util.js"></script>
 ```
 
 ### JAM Combo URL (via paste-assetgraph)
 
+One cacheable request for a whole module group. The first path segment is the group's
+cache key, then the `~`-separated module names:
+
 ```html
-<script src="/jam?v=2.0.1&m=paste/dom,paste/event,paste/util"></script>
+<script src="/paste/2.0.1/paste.dom~paste.event~paste.util.min.js" defer></script>
 ```
 
 ## Performance
@@ -99,4 +95,4 @@ paste-surface-*    ← templates, ViewModels, asset injection
 
 ## License
 
-MIT
+Apache License, Version 2.0. See `LICENSE` and `NOTICE.md`.
