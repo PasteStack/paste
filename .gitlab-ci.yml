@@ -38,6 +38,9 @@ test:
   script:
     # Every shipped source file must parse; a missed file is a broken package.
     - find src/js -name '*.js' -print0 | xargs -0 -n1 node --check
+    # The module checks are the repository's own suite (Node's test runner, no
+    # dependencies). Running them here is what keeps them honest.
+    - node --test 'tests/*.test.cjs'
 
 publish:
   extends: [.tomshley-cicd-publish-generic]
