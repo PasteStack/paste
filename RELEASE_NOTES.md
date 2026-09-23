@@ -1,3 +1,23 @@
+# paste v2.1.0
+
+**Date:** 2026-09-23
+
+## Changed
+
+- `paste.io`: a reply without a `Content-Type` header, or a JSON reply
+  (`application/json`, with or without parameters) whose body does not parse,
+  now reaches `onFailure` with the raw response text. Earlier releases threw
+  inside `readystatechange`, so neither callback ran and the caller never
+  learned the request had finished.
+- `paste.io.get`, `post`, `put` and `del` return `null` when no request
+  transport can be created, as `open` already did, instead of throwing on the
+  missing request.
+
+## Added
+
+- Behaviour checks for `paste.io` on Node's built-in test runner (no
+  dependencies); the pipeline runs them next to the syntax check.
+
 # paste v2.0.2
 
 **Date:** 2026-09-22
