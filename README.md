@@ -3,7 +3,7 @@
 ![Author](https://img.shields.io/badge/author-Thomas%20Schena-blue)
 ![GitHub](https://img.shields.io/badge/github-sgoggles-black?logo=github)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
-![Version](https://img.shields.io/badge/version-2.0.2-blue)
+![Version](https://img.shields.io/badge/version-2.1.0-blue)
 
 **paste** is a minimalist, dependency-free JavaScript toolkit originally created in **2011** to power high-performance webviews inside early iPhone applications. It is the foundational layer of [PasteStack](https://github.com/PasteStack).
 
@@ -49,9 +49,9 @@ The modules are classic scripts registered with `paste.define`; there is no ES m
 build in this package.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/paste.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/dom.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.0.2/src/js/util.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.1.0/src/js/paste.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.1.0/src/js/dom.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/PasteStack/paste@v2.1.0/src/js/util.js"></script>
 ```
 
 ### JAM Combo URL (via paste-assetgraph)
