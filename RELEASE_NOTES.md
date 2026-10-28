@@ -1,3 +1,13 @@
+# paste v2.1.1
+
+**Date:** 2026-10-28
+
+## Changed
+
+- Apache License 2.0 applied consistently: verbatim LICENSE text, NOTICE rename, Apache short header in every first-party source file, corrected license metadata.
+
+---
+
 # paste v2.1.0
 
 **Date:** 2026-09-23
@@ -25,7 +35,7 @@
 ## Licensing
 
 - Licensed under the Apache License, Version 2.0. `LICENSE` now carries the full
-  grant and `NOTICE.md` records the bundled third-party components and their terms.
+  grant and `NOTICE` records the bundled third-party components and their terms.
 - Removed the house copyright header that had been applied over vendored
   third-party sources; those files keep their own upstream notices.
 
